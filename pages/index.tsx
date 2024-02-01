@@ -1,6 +1,13 @@
-import React from "react"
+import Navbar from "@/components/navbar";
+import React from "react";
+import "./index.css";
+import ListRequest from "@/components/ListRequests";
+
 export default function Index() {
   return (
-    <h1>pagina de Index</h1>
-  )
+    <>
+      <Navbar></Navbar>
+      <ListRequest></ListRequest>
+    </>
+  );
 }
