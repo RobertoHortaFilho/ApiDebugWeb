@@ -2,6 +2,7 @@ import { IData } from "../pages/api/interfaces";
 import client from "./dbConnection"
 
 export default async function createService (data: any): Promise<IData>{
+  console.log('entrou no service', new Date().getSeconds())
   try {
     await client.connect()
     const database = client.db('requests');
