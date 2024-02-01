@@ -23,10 +23,12 @@ export default async function request(req: NextApiRequest, res: NextApiResponse)
 }
 
 const POSTRequest = async (data: any): Promise<IData> => {
+  console.log('post')
   return createService(data)
   
 };
 
 const GETRequest = async (data: any): Promise<IData> => {
+  console.log('get')
   return { error: "ok", message: [] };
 };
