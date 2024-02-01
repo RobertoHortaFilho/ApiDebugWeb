@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { IData, errorConverter } from "./interfaces";
-import createService from "../../models/service";
+import createService, { getRequests } from "../../models/service";
 
 export default async function request(req: NextApiRequest, res: NextApiResponse) {
   console.log(req.method);
@@ -30,5 +30,5 @@ const POSTRequest = async (data: any): Promise<IData> => {
 
 const GETRequest = async (data: any): Promise<IData> => {
   console.log('get')
-  return { error: "ok", message: [] };
+  return await getRequests();
 };
